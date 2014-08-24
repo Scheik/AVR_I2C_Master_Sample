@@ -1,0 +1,494 @@
+Archive member included because of file (symbol)
+
+/usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/crtm32.o (exit)
+/usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_copy_data.o)
+                              ./I2C_Master_Main.o (__do_copy_data)
+/usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_clear_bss.o)
+                              ./TWI_Master.o (__do_clear_bss)
+/usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(itoa.o)
+                              ./rs232.o (itoa)
+/usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(strrev.o)
+                              /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(itoa.o) (strrev)
+/usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_udivmodhi4.o)
+                              /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(itoa.o) (__udivmodhi4)
+
+Allocating common symbols
+Common symbol       size              file
+
+UART_MSG_FLAG       0x1               ./rs232.o
+UART_RXBuffer       0x10              ./rs232.o
+TWI_RXBuffer        0x10              ./TWI_Master.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/crtm32.o
+LOAD ./I2C_Master_Main.o
+LOAD ./TWI_Master.o
+LOAD ./rs232.o
+LOAD /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a
+LOAD /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0x3fc
+ *(.vectors)
+ .vectors       0x00000000       0x54 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data.FlashString
+                0x00000054       0x3b ./I2C_Master_Main.o
+                0x00000054                FlashString
+                0x00000090                . = ALIGN (0x2)
+ *fill*         0x0000008f        0x1 00
+                0x00000090                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000090        0x0 linker stubs
+ *(.trampolines*)
+                0x00000090                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000090                __ctors_start = .
+ *(.ctors)
+                0x00000090                __ctors_end = .
+                0x00000090                __dtors_start = .
+ *(.dtors)
+                0x00000090                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000090        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/crtm32.o
+                0x00000090                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000090        0xc /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000009c       0x16 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_copy_data.o)
+                0x0000009c                __do_copy_data
+ .init4         0x000000b2       0x10 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_clear_bss.o)
+                0x000000b2                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000c2        0x8 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x000000ca        0x4 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/crtm32.o
+                0x000000ca                __vector_1
+                0x000000ca                __vector_12
+                0x000000ca                __bad_interrupt
+                0x000000ca                __vector_6
+                0x000000ca                __vector_3
+                0x000000ca                __vector_11
+                0x000000ca                __vector_17
+                0x000000ca                __vector_19
+                0x000000ca                __vector_7
+                0x000000ca                __vector_5
+                0x000000ca                __vector_4
+                0x000000ca                __vector_9
+                0x000000ca                __vector_2
+                0x000000ca                __vector_15
+                0x000000ca                __vector_8
+                0x000000ca                __vector_14
+                0x000000ca                __vector_10
+                0x000000ca                __vector_16
+                0x000000ca                __vector_18
+                0x000000ca                __vector_20
+ .text          0x000000ce        0x0 ./I2C_Master_Main.o
+ .text          0x000000ce        0x0 ./TWI_Master.o
+ .text          0x000000ce        0x0 ./rs232.o
+ .text          0x000000ce        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_exit.o)
+ .text          0x000000ce        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_copy_data.o)
+ .text          0x000000ce        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_clear_bss.o)
+ .text          0x000000ce        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(itoa.o)
+ .text          0x000000ce        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(strrev.o)
+ .text          0x000000ce        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_udivmodhi4.o)
+                0x000000ce                . = ALIGN (0x2)
+ *(.text.*)
+ .text.startup.main
+                0x000000ce      0x104 ./I2C_Master_Main.o
+                0x000000ce                main
+ .text.i2c_init
+                0x000001d2        0x8 ./TWI_Master.o
+                0x000001d2                i2c_init
+ .text.i2c_start
+                0x000001da       0x36 ./TWI_Master.o
+                0x000001da                i2c_start
+ .text.i2c_start_wait
+                0x00000210       0x3c ./TWI_Master.o
+                0x00000210                i2c_start_wait
+ .text.i2c_rep_start
+                0x0000024c        0x4 ./TWI_Master.o
+                0x0000024c                i2c_rep_start
+ .text.i2c_stop
+                0x00000250        0xc ./TWI_Master.o
+                0x00000250                i2c_stop
+ .text.i2c_write
+                0x0000025c       0x1a ./TWI_Master.o
+                0x0000025c                i2c_write
+ .text.i2c_readAck
+                0x00000276        0xe ./TWI_Master.o
+                0x00000276                i2c_readAck
+ .text.i2c_readNak
+                0x00000284        0xe ./TWI_Master.o
+                0x00000284                i2c_readNak
+ .text.__vector_13
+                0x00000292       0x4e ./rs232.o
+                0x00000292                __vector_13
+ .text.init_uart
+                0x000002e0       0x16 ./rs232.o
+                0x000002e0                init_uart
+ .text.uart_putc
+                0x000002f6        0xc ./rs232.o
+                0x000002f6                uart_putc
+ .text.uart_puts
+                0x00000302       0x18 ./rs232.o
+                0x00000302                uart_puts
+ .text.uart_puts_p
+                0x0000031a       0x1c ./rs232.o
+                0x0000031a                uart_puts_p
+ .text.uart_puti
+                0x00000336       0x38 ./rs232.o
+                0x00000336                uart_puti
+ .text.libgcc.mul
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000036e        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x0000036e       0x42 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(itoa.o)
+                0x0000036e                itoa
+ .text.avr-libc
+                0x000003b0       0x20 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(strrev.o)
+                0x000003b0                strrev
+ .text.libgcc.mul
+                0x000003d0        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.div
+                0x000003d0       0x28 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_udivmodhi4.o)
+                0x000003d0                __udivmodhi4
+ .text.libgcc   0x000003f8        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x000003f8        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x000003f8        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x000003f8        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_udivmodhi4.o)
+                0x000003f8                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000003f8        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_exit.o)
+                0x000003f8                exit
+                0x000003f8                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000003f8        0x4 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x000003fc                _etext = .
+
+.data           0x00800060       0xaa load address 0x000003fc
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060        0x0 ./I2C_Master_Main.o
+ .data          0x00800060        0x0 ./TWI_Master.o
+ .data          0x00800060        0x0 ./rs232.o
+ .data          0x00800060        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_exit.o)
+ .data          0x00800060        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_copy_data.o)
+ .data          0x00800060        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_clear_bss.o)
+ .data          0x00800060        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(itoa.o)
+ .data          0x00800060        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(strrev.o)
+ .data          0x00800060        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_udivmodhi4.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.1
+                0x00800060       0xa9 ./I2C_Master_Main.o
+                                 0xac (size before relaxing)
+ *(.gnu.linkonce.d*)
+                0x0080010a                . = ALIGN (0x2)
+ *fill*         0x00800109        0x1 00
+                0x0080010a                _edata = .
+                0x0080010a                PROVIDE (__data_end, .)
+
+.bss            0x0080010a       0x22
+                0x0080010a                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080010a        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/crtm32.o
+ .bss           0x0080010a        0x0 ./I2C_Master_Main.o
+ .bss           0x0080010a        0x0 ./TWI_Master.o
+ .bss           0x0080010a        0x0 ./rs232.o
+ .bss           0x0080010a        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_exit.o)
+ .bss           0x0080010a        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0080010a        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0080010a        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(itoa.o)
+ .bss           0x0080010a        0x0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(strrev.o)
+ .bss           0x0080010a        0x0 /usr/lib/gcc/avr/4.7.2/avr5/libgcc.a(_udivmodhi4.o)
+ *(.bss*)
+ .bss.UART_RxCount
+                0x0080010a        0x1 ./rs232.o
+                0x0080010a                UART_RxCount
+ *(COMMON)
+ COMMON         0x0080010b       0x10 ./TWI_Master.o
+                0x0080010b                TWI_RXBuffer
+ COMMON         0x0080011b       0x11 ./rs232.o
+                0x0080011b                UART_MSG_FLAG
+                0x0080011c                UART_RXBuffer
+                0x0080012c                PROVIDE (__bss_end, .)
+                0x000003fc                __data_load_start = LOADADDR (.data)
+                0x000004a6                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0080012c        0x0
+                0x0080012c                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0080012c                PROVIDE (__noinit_end, .)
+                0x0080012c                _end = .
+                0x0080012c                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000      0x954
+ *(.stab)
+ .stab          0x00000000      0x6cc /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/crtm32.o
+ .stab          0x000006cc      0x1b0 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(itoa.o)
+                                0x1bc (size before relaxing)
+ .stab          0x0000087c       0xd8 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/libc.a(strrev.o)
+                                 0xe4 (size before relaxing)
+
+.stabstr        0x00000000       0xb4
+ *(.stabstr)
+ .stabstr       0x00000000       0xb4 /usr/lib/gcc/avr/4.7.2/../../../avr/lib/avr5/crtm32.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x11
+ *(.comment)
+ .comment       0x00000000       0x11 ./I2C_Master_Main.o
+                                 0x12 (size before relaxing)
+ .comment       0x00000000       0x12 ./TWI_Master.o
+ .comment       0x00000000       0x12 ./rs232.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(I2C_Master_Sample.elf elf32-avr)
+LOAD linker stubs
